@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .form-container {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 4px;
+      background-color: #e38c0a;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        color: #ffffff;
+        transform: scale(1.1);
+        background-color: #bb750d;
+    }
+
+    .signup-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .signup-link a {
+      color: #23a3de;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+
+    .logo {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .logo img {
+      width: 100px; /* تعديل حجم اللوجو حسب الحاجة */
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="Screenshot 2024-06-24 102142.png" alt="لوجو التطبيق">
+    </div>
+    <div class="form-container sign-in-container">
+      <form action="#" method="POST">
+        <h1>تسجيل الدخول</h1>
+        <input type="email" placeholder="البريد الإلكتروني" required>
+        <input type="password" placeholder="كلمة المرور" required>
+        <button onclick="loginUser()">تسجيل الدخول</button>
+        <div class="signup-link">
+          <p>ليس لديك حساب؟ <a href="#" id="signup-link">إنشاء حساب جديد</a></p>
+        </div>
+      </form>
+    </div>
+    <div class="form-container sign-up-container" style="display: none;">
+      <form action="#" method="POST">
+        <h1>إنشاء حساب</h1>
+        <input type="text" placeholder="الاسم" required>
+        <input type="email" placeholder="البريد الإلكتروني" required>
+        <input type="password" placeholder="كلمة المرور" required>
+        <button>إنشاء حساب</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const signupLink = document.getElementById('signup-link');
+    const signInContainer = document.querySelector('.sign-in-container');
+    const signUpContainer = document.querySelector('.sign-up-container');
+
+    signupLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      signInContainer.style.display = 'none';
+      signUpContainer.style.display = 'flex';
+    });
+    const signInButton = document.getElementById('signIn');
+    const signUpButton = document.getElementById('signUp');
+    const container = document.querySelector('.container');
+  
+    signInButton.addEventListener('click', () => {
+      container.classList.remove('right-panel-active');
+    });
+  
+    signUpButton.addEventListener('click', () => {
+      container.classList.add('right-panel-active');
+    });
+  
+    function loginUser() {
+      // Replace with your login logic
+      window.location.href = 'chooseaccount.html'; // Redirect to dashboard after successful login
+    }
+  
+    const loginForm = document.querySelector('.sign-in-container form');
+    loginForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      loginUser(); // Call loginUser function on form submit
+    });
+    
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

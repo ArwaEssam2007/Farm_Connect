@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المستهلك - استعراض المنتجات</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .product {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .product img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .product-info {
+      flex: 1;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .product-description {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-size: 16px;
+      color: #e38c0a;
+      font-weight: bold;
+    }
+
+    .add-to-cart {
+      padding: 8px 16px;
+      background-color: #e38c0a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background-color: #bb750d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 style="text-align: center; margin-bottom: 20px;">استعراض المنتجات</h1>
+    
+    <div class="product">
+      <img src="tomato.png" alt="منتج 1">
+      <div class="product-info">
+        <div class="product-name">  طماطم فريش</div>
+        <div class="product-description">وصف المنتج الأول يتم وضعه هنا. يمكنك وصف المنتج ومميزاته.</div>
+        <div class="product-price">50 جنيه</div>
+      </div>
+      <button class="add-to-cart">إضافة إلى السلة</button>
+    </div>
+
+    <div class="product">
+      <img src="apple.png" alt="منتج 2">
+      <div class="product-info">
+        <div class="product-name"> تفاح بلدي طازج </div>
+        <div class="product-description">وصف المنتج الثاني يتم وضعه هنا. يمكنك وصف المنتج ومميزاته.</div>
+        <div class="product-price">70 جنيه</div>
+      </div>
+      <button class="add-to-cart">إضافة إلى السلة</button>
+    </div>
+
+    <div class="product">
+      <img src="kh.png" alt="منتج 3">
+      <div class="product-info">
+        <div class="product-name">خيار طازج  </div>
+        <div class="product-description">وصف المنتج الثالث يتم وضعه هنا. يمكنك وصف المنتج ومميزاته.</div>
+        <div class="product-price">60 جنيه</div>
+      </div>
+      <button class="add-to-cart">إضافة إلى السلة</button>
+    </div>
+
+    <!-- يمكنك إضافة المزيد من المنتجات هنا -->
+
+  </div>
+</body>
+</html>
